@@ -1,0 +1,47 @@
+.dropdown{
+    &-header{
+        // display: none;
+        position: fixed;
+        top: 135px;
+        left: 0;
+        width: 100%;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        visibility: hidden;
+        @include trn();
+        &.active{
+            opacity: 1;
+            top: 105px;
+            visibility: visible;
+        }    
+    }
+    &-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+    &-head{
+        background-color: $black-color;
+        position: relative;
+        z-index: 2;
+        padding: 10px 0;
+        &__title{
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+    &-body{
+        flex: 1 1 auto;
+        background-color: $white-color;
+        position: relative;
+        padding: 24px 0;
+        z-index: 2;
+    }
+}
